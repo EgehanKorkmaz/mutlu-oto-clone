@@ -21,7 +21,7 @@ const features = [
 
 export default function Features() {
   return (
-    <section id="hakkimizda" className="bg-white py-24 sm:py-32">
+    <section id="hakkimizda" className="bg-white pt-5 pb-24 sm:pb-32">
       <div className="container mx-auto px-4 md:px-8 max-w-7xl">
         
         {/* Bölüm Başlığı */}

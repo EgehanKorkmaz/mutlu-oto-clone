@@ -24,7 +24,6 @@ const features = [
 
 export default function Features() {
   return (
-    // overflow-hidden kaldırıldı (Büyük kartın kesilmemesi için)
     <section id="hakkimizda" className="bg-white py-24 sm:py-32 relative z-10">
       <div className="container mx-auto px-4 md:px-8 max-w-7xl">
 
@@ -38,7 +37,7 @@ export default function Features() {
         <div className="mx-auto mt-8 max-w-2xl lg:max-w-none">
           <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-12 lg:max-w-none lg:grid-cols-3">
             {features.map((feature, index) => (
-              // 1. DIŞ KATMAN: Sadece sahneye giriş animasyonunu ve z-index katmanını yönetir
+              // DIŞ KATMAN
               <motion.div
                 key={feature.title}
                 initial={{ opacity: 0, scale: 0.5, y: 50 }}
@@ -55,7 +54,7 @@ export default function Features() {
                 }}
                 className="relative z-20 hover:z-50 group"
               >
-                {/* 2. İÇ KATMAN: Sadece hover büyümesini ve pürüzsüz geri dönüşü (0.3 saniye) yönetir */}
+                {/* İÇ KATMAN hover büyümesini ve pürüzsüz geri dönüşü yönetir */}
                 <motion.div
                   whileHover={{ scale: 1.3 }}
                   transition={{ duration: 0.3, ease: "easeInOut" }}

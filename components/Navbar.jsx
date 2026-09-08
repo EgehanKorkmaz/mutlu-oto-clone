@@ -15,7 +15,7 @@ export default function Navbar() {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
 
-      // Sayfa aşağı kaydırıldığında ve en üstten biraz uzaklaşıldığında gizle
+      // Sayfa aşağı kaydırıldığında gizle
       if (currentScrollY > lastScrollY && currentScrollY > 100) {
         setIsVisible(false);
       }
@@ -81,10 +81,10 @@ export default function Navbar() {
         </div>
       </header>
 
-      {/* Mobil Açılır Menü (Animasyonlu ve Modern Tasarım) */}
+      {/* Mobil Açılır Menü */}
       <AnimatePresence>
         {isMobileMenuOpen && (
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: -15, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -15, scale: 0.95 }}
@@ -98,11 +98,11 @@ export default function Navbar() {
               <Link href="#galeri" onClick={() => setIsMobileMenuOpen(false)} className="rounded-xl px-4 py-3 text-base font-semibold text-slate-700 transition-colors hover:bg-slate-50 hover:text-[#e7000b]">Galeri</Link>
               <Link href="#iletisim" onClick={() => setIsMobileMenuOpen(false)} className="rounded-xl px-4 py-3 text-base font-semibold text-slate-700 transition-colors hover:bg-slate-50 hover:text-[#e7000b]">İletişim</Link>
             </div>
-            
+
             {/* Alt Kısım - Aksiyon Butonu */}
             <div className="bg-slate-50 p-4 border-t border-slate-100">
-              <a 
-                href="tel:+902324350135" 
+              <a
+                href="tel:+902324350135"
                 className="flex w-full items-center justify-center gap-2 rounded-xl bg-[#e7000b] px-5 py-3.5 text-base font-bold text-white shadow-sm transition-all hover:bg-[#c50009]"
               >
                 <Phone className="h-5 w-5" />

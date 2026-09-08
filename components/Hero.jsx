@@ -20,10 +20,8 @@ export default function Hero() {
   ]);
 
   return (
-    // Yükseklik h-[calc(100dvh-96px)] olarak güncellendi
     <section className="relative w-full h-[calc(100dvh-150px)] min-h-[500px] bg-slate-900 overflow-hidden">
 
-      {/* Embla Arka Plan Slider */}
       <div className="absolute inset-0 w-full h-full" ref={emblaRef}>
         <div className="flex h-full w-full">
           {BGS.map((src, index) => (
@@ -40,10 +38,10 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Alttan Üste Karartma (Gradient Overlay) */}
+      {/* Gradient */}
       <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/50 to-transparent pointer-events-none z-10" />
 
-      {/* Hero İçeriği */}
+      {/* Hero */}
       <div className="container relative z-20 mx-auto flex h-full flex-col justify-end px-4 pb-16 md:px-8">
         <div className="max-w-3xl">
           <h1 className="mb-4 text-4xl font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl">
@@ -63,7 +61,6 @@ export default function Hero() {
               Hemen Ara
             </a>
 
-            {/* Google Maps Linki Güncellendi */}
             <a
               href="https://www.google.com/maps/place/Mutlu+Otomotiv/@38.4474002,27.1836474,19.92z/data=!4m6!3m5!1s0x14b962a540165a4d:0x326a0d3b65bd9cf5!8m2!3d38.4473057!4d27.1838806!16s%2Fg%2F11g6pgz3l2?entry=ttu&g_ep=EgoyMDI2MDkwMi4wIKXMDSoASAFQAw%3D%3D"
               target="_blank"

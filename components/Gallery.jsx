@@ -10,17 +10,15 @@ const images = Array.from({ length: 11 }, (_, i) => `/foto${i + 1}.jpg`);
 
 export default function Gallery() {
   const [selectedIndex, setSelectedIndex] = useState(0);
-  
-  // Ana slider (Büyük resim)
+
   const [emblaMainRef, emblaMainApi] = useEmblaCarousel({ loop: true });
-  
-  // Alt slider (Küçük resimler - Thumbs)
+
   const [emblaThumbsRef, emblaThumbsApi] = useEmblaCarousel({
     containScroll: "keepSnaps",
     dragFree: true,
   });
 
-  // Sol/Sağ ok butonları için kaydırma fonksiyonları
+  // Sol/Sağ ok butonları
   const scrollPrev = useCallback(() => {
     if (emblaMainApi) emblaMainApi.scrollPrev();
   }, [emblaMainApi]);
@@ -29,7 +27,6 @@ export default function Gallery() {
     if (emblaMainApi) emblaMainApi.scrollNext();
   }, [emblaMainApi]);
 
-  // Küçük resme tıklandığında ana slider'ı o resme kaydırır
   const onThumbClick = useCallback(
     (index) => {
       if (!emblaMainApi || !emblaThumbsApi) return;
@@ -38,7 +35,6 @@ export default function Gallery() {
     [emblaMainApi, emblaThumbsApi]
   );
 
-  // Ana slider kaydığında küçük resim slider'ını senkronize eder
   const onSelect = useCallback(() => {
     if (!emblaMainApi || !emblaThumbsApi) return;
     setSelectedIndex(emblaMainApi.selectedScrollSnap());
@@ -59,7 +55,7 @@ export default function Gallery() {
   return (
     <section id="galeri" className="bg-slate-50 py-24 sm:py-32">
       <div className="container mx-auto px-4 md:px-8 max-w-5xl">
-        
+
         {/* Başlık */}
         <div className="mx-auto max-w-2xl text-center mb-16">
           <h2 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
@@ -112,18 +108,17 @@ export default function Gallery() {
             </button>
           </div>
 
-          {/* Küçük Resimler (Thumbnails) Alanı */}
+          {/* Thumbnails */}
           <div className="overflow-hidden mt-2" ref={emblaThumbsRef}>
             <div className="flex gap-3 touch-pan-y">
               {images.map((src, index) => (
                 <button
                   key={index}
                   onClick={() => onThumbClick(index)}
-                  className={`relative flex-[0_0_25%] sm:flex-[0_0_20%] md:flex-[0_0_15%] aspect-video min-w-0 overflow-hidden rounded-lg border-2 transition-all duration-300 cursor-pointer ${
-                    index === selectedIndex
+                  className={`relative flex-[0_0_25%] sm:flex-[0_0_20%] md:flex-[0_0_15%] aspect-video min-w-0 overflow-hidden rounded-lg border-2 transition-all duration-300 cursor-pointer ${index === selectedIndex
                       ? "border-[#e7000b] opacity-100"
                       : "border-transparent opacity-50 hover:opacity-100"
-                  }`}
+                    }`}
                   type="button"
                   aria-label={`Görsel ${index + 1}`}
                 >

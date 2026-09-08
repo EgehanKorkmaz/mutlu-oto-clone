@@ -5,10 +5,10 @@ export default function Footer() {
   return (
     <footer id="iletisim" className="bg-slate-950 text-slate-300 py-16">
       <div className="container mx-auto px-4 md:px-8 max-w-7xl">
-        
+
         {/* Üst Kısım: 3 Kolonlu Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 border-b border-slate-800 pb-12">
-          
+
           {/* 1. Kolon: Marka ve Slogan */}
           <div className="flex flex-col">
             <Link href="/" className="text-2xl font-bold text-white tracking-tight mb-4">
@@ -25,7 +25,7 @@ export default function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-[#e7000b] shrink-0 mt-0.5" />
-                <a 
+                <a
                   href="https://www.google.com/maps/place/Mutlu+Otomotiv/@38.4474002,27.1836474,19.92z/data=!4m6!3m5!1s0x14b962a540165a4d:0x326a0d3b65bd9cf5!8m2!3d38.4473057!4d27.1838806!16s%2Fg%2F11g6pgz3l2?entry=ttu&g_ep=EgoyMDI2MDkwMi4wIKXMDSoASAFQAw%3D%3D"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -80,26 +80,26 @@ export default function Footer() {
 
         </div>
 
-        {/* Alt Kısım: Telif Hakkı (Copyright) */}
+        {/* Alt Kısım: Copyright */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-500">
           <p>© 2026 Mutlu Oto. Tüm Hakları Saklıdır.</p>
-          <a 
-            href="https://www.egehankorkmaz.me/" 
-            target="_blank" 
-            rel="noopener noreferrer" 
+          <a
+            href="https://www.egehankorkmaz.me/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center text-[rgb(154,132,194)] hover:text-white transition-colors"
           >
-            <svg 
-              xmlns="http://www.w3.org/2000/svg" 
-              width="14" 
-              height="14" 
-              viewBox="0 0 24 24" 
-              fill="none" 
-              stroke="currentColor" 
-              strokeWidth="2" 
-              strokeLinecap="round" 
-              strokeLinejoin="round" 
-              aria-hidden="true" 
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
               className="mr-1.5"
             >
               <path d="M18 5a2 2 0 0 1 2 2v8.526a2 2 0 0 0 .212.897l1.068 2.127a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45l1.068-2.127A2 2 0 0 0 4 15.526V7a2 2 0 0 1 2-2z"></path>

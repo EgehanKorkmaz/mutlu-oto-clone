@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Mutlu Oto Servis - Modern Web Arayüzü
 
-## Getting Started
+Bu proje, bir oto servis firması için geliştirilmiş yüksek performanslı, modern ve tamamen duyarlı (responsive) bir kurumsal web sitesidir. Standart bir tasarımı alıp, modern web teknolojileri ve pürüzsüz animasyonlarla baştan aşağı yenileyerek birinci sınıf bir kullanıcı deneyimi (UX) sunmayı hedefledim.
 
-First, run the development server:
+## 🚀 Kullanılan Teknolojiler ve Kütüphaneler
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Bu proje, performans ve modern geliştirici deneyimi göz önünde bulundurularak aşağıdaki teknolojilerle inşa edilmiştir:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+*   **Framework:** [Next.js (App Router)](https://nextjs.org/) - Sunucu taraflı derleme (SSR) ve optimize edilmiş yönlendirme.
+*   **Stil ve Tasarım:** [Tailwind CSS](https://tailwindcss.com/) - Hızlı ve utility-first CSS mimarisi.
+*   **Animasyon Motoru:** [Framer Motion](https://www.framer.com/motion/) - Kaydırma (scroll-reveal), hover efektleri ve DOM'dan silinme (AnimatePresence) animasyonları.
+*   **Slider / Carousel:** [Embla Carousel](https://www.embla-carousel.com/) - Hem Hero bölümündeki fade geçişleri hem de Galeri bölümündeki küçük resim (thumbnail) senkronizasyonu için hafif ve performanslı çözüm.
+*   **Kayan Yazı Efekti:** [React Fast Marquee](https://www.react-fast-marquee.com/) - Marka logolarının filigran olarak kesintisiz akışı için.
+*   **İkonlar:** [Lucide React](https://lucide.dev/) ve [React Icons](https://react-icons.github.io/react-icons/) - Vektörel ve özelleştirilebilir modern ikon setleri.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ✨ Orijinal Tasarıma Kıyasla Yapılan Geliştirmeler
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Bu projeyi sadece kodlamakla kalmadım, aynı zamanda kullanıcı deneyimini (UX) artıracak mimari kararlar alarak orijinal tasarımı geliştirdim:
 
-## Learn More
+*   **Akıllı ve Yüzen Navbar:** Sayfanın en üstünde yer kaplayan statik bir menü yerine, kaydırma yönüne duyarlı (scroll-aware) yüzen bir baloncuk menü tasarlandı. Sayfa aşağı kaydırıldığında gizlenir, yukarı çıkıldığında belirir.
+*   **Dinamik Marka Filigranı:** Hero görselinin hemen altına statik logolar dizmek yerine, arka planda sürekli akan bir filigran (watermark) yapısı kuruldu. Logolar varsayılan olarak gri tonlamalıdır (grayscale), üzerine gelindiğinde orijinal renklerine kavuşur.
+*   **İç İçe Katmanlı (Nested) Animasyonlar:** "Neden Biz?" bölümündeki kartlarda animasyon çakışmalarını önlemek için dış katman sahneye giriş (scroll-reveal) efektini, iç katman ise kartın 1.5 katına büyüme (hover) ve z-index öne çıkma işlevini üstlenecek şekilde izole edildi.
+*   **Optimize Edilmiş Viewport Ölçüleri:** Mobil tarayıcılardaki adres çubuğu kaymalarını önlemek için standart `vh` yerine dinamik `dvh` (Dynamic Viewport Height) birimleri kullanılarak Hero ve Filigran hizalaması milimetrik olarak oturtuldu.
+*   **Senkronize Galeri Yapısı:** Sabit 12'li resim ızgarası yerine, Embla Carousel kullanılarak ana görsel ile altındaki küçük resimlerin (thumbnails) state üzerinden birbiriyle konuştuğu gelişmiş bir galeri mekanizması kuruldu.
+*   **Animasyonlu Mobil Menü:** Framer Motion'ın `AnimatePresence` bileşeni kullanılarak, mobil hamburger menünün açılıp kapanırken aniden belirmesi/kaybolması yerine pürüzsüzce kayarak (smooth) sahneye girmesi sağlandı.
 
-To learn more about Next.js, take a look at the following resources:
+## 🛠️ Kurulum ve Çalıştırma
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Projeyi yerel ortamınızda çalıştırmak için aşağıdaki adımları izleyebilirsiniz:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Depoyu bilgisayarınıza klonlayın:
+   ```bash
+   git clone [https://github.com/KULLANICI_ADIN/mutlu-oto-clone.git](https://github.com/KULLANICI_ADIN/mutlu-oto-clone.git)
 
-## Deploy on Vercel
+    Proje dizinine gidin ve bağımlılıkları yükleyin:
+    Bash
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+    cd mutlu-oto-clone
+    npm install
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+    Geliştirme sunucusunu başlatın:
+    Bash
+
+    npm run dev
+
+    Tarayıcınızda http://localhost:3000 adresine giderek projeyi görüntüleyin.

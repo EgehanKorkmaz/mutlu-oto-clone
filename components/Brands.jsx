@@ -14,16 +14,16 @@ const brands = [
 export default function Brands() {
   return (
     <section className="bg-white py-6 overflow-hidden w-full">
-      <Marquee 
-        speed={40} 
-        autoFill={true} 
-        gradient={true} 
-        gradientColor="white" 
+      <Marquee
+        speed={40}
+        autoFill={true}
+        gradient={true}
+        gradientColor="white"
         gradientWidth={100}
       >
         {brands.map((brand, index) => (
-          <div 
-            key={index} 
+          <div
+            key={index}
             className="mx-6 md:mx-12 flex items-center justify-center"
           >
             <Image

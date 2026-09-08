@@ -65,7 +65,7 @@ export default function Gallery() {
           <h2 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
             Galeri
           </h2>
-          <div className="mx-auto mt-5 mb-5 h-1 w-16 rounded bg-[#f25c38]" />
+          <div className="mx-auto mt-5 mb-5 h-1 w-16 rounded bg-[#e7000b]" />
           <p className="text-lg leading-relaxed text-slate-500">
             Temiz atölye, titiz işçilik ve kusursuz teslimat. Servisimizden kareler.
           </p>
@@ -95,7 +95,7 @@ export default function Gallery() {
             <button
               type="button"
               onClick={scrollPrev}
-              className="absolute left-3 sm:left-4 top-1/2 -translate-y-1/2 z-10 flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-white/90 text-slate-800 shadow-md border border-slate-200/60 backdrop-blur-md transition-all duration-200 hover:bg-white hover:text-[#f25c38] hover:scale-110 active:scale-95 cursor-pointer focus:outline-none"
+              className="absolute left-3 sm:left-4 top-1/2 -translate-y-1/2 z-10 flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-white/90 text-slate-800 shadow-md border border-slate-200/60 backdrop-blur-md transition-all duration-200 hover:bg-white hover:text-[#e7000b] hover:scale-110 active:scale-95 cursor-pointer focus:outline-none"
               aria-label="Önceki Görsel"
             >
               <ChevronLeft className="h-6 w-6 sm:h-7 sm:w-7 -ml-0.5" />
@@ -105,7 +105,7 @@ export default function Gallery() {
             <button
               type="button"
               onClick={scrollNext}
-              className="absolute right-3 sm:right-4 top-1/2 -translate-y-1/2 z-10 flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-white/90 text-slate-800 shadow-md border border-slate-200/60 backdrop-blur-md transition-all duration-200 hover:bg-white hover:text-[#f25c38] hover:scale-110 active:scale-95 cursor-pointer focus:outline-none"
+              className="absolute right-3 sm:right-4 top-1/2 -translate-y-1/2 z-10 flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-white/90 text-slate-800 shadow-md border border-slate-200/60 backdrop-blur-md transition-all duration-200 hover:bg-white hover:text-[#e7000b] hover:scale-110 active:scale-95 cursor-pointer focus:outline-none"
               aria-label="Sonraki Görsel"
             >
               <ChevronRight className="h-6 w-6 sm:h-7 sm:w-7 -mr-0.5" />
@@ -121,7 +121,7 @@ export default function Gallery() {
                   onClick={() => onThumbClick(index)}
                   className={`relative flex-[0_0_25%] sm:flex-[0_0_20%] md:flex-[0_0_15%] aspect-video min-w-0 overflow-hidden rounded-lg border-2 transition-all duration-300 cursor-pointer ${
                     index === selectedIndex
-                      ? "border-[#f25c38] opacity-100"
+                      ? "border-[#e7000b] opacity-100"
                       : "border-transparent opacity-50 hover:opacity-100"
                   }`}
                   type="button"

@@ -1,5 +1,3 @@
-"use client";
-
 import Marquee from "react-fast-marquee";
 import Image from "next/image";
 
@@ -15,8 +13,8 @@ const brands = [
 
 export default function Brands() {
   return (
-    <section className="w-full bg-white py-10 overflow-hidden">
-      <div className="w-full">
+    <section className="bg-white py-6 overflow-hidden">
+      <div className="mx-auto max-w-7xl">
         <Marquee 
           speed={40} 
           autoFill={true} 
@@ -27,13 +25,13 @@ export default function Brands() {
           {brands.map((brand, index) => (
             <div 
               key={index} 
-              className="mx-8 md:mx-16 flex items-center justify-center"
+              className="mx-6 md:mx-12 flex items-center justify-center"
             >
               <Image
                 src={brand.src}
                 alt={`${brand.name} Logosu`}
-                width={120}
-                height={60}
+                width={90}
+                height={45}
                 className="object-contain grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
               />
             </div>

@@ -12,17 +12,17 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Mutlu Oto | Özel Servis & Bakım Onarım",
-  description: "Mitsubishi uzmanlığı ve tüm marka araçlarda garantili özel servis, bakım ve onarım hizmetleri.",
+  title: "Mutlu Oto | Profesyonel Oto Servis",
+  description: "Aracınız usta ellere emanet.",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html
       lang="tr"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} scroll-smooth`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="antialiased">{children}</body>
     </html>
   );
 }

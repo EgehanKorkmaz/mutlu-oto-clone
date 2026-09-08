@@ -12,7 +12,7 @@ export default function Footer() {
           {/* 1. Kolon: Marka ve Slogan */}
           <div className="flex flex-col">
             <Link href="/" className="text-2xl font-bold text-white tracking-tight mb-4">
-              Mutlu <span className="text-[#f25c38]">Oto</span>
+              Mutlu <span className="text-[#e7000b]">Oto</span>
             </Link>
             <p className="text-slate-400 leading-relaxed mb-6">
               Aracınızın güvenilir çözüm ortağı. İzmir Bornova&apos;da yetkili servis tecrübesiyle tüm marka araçlarınıza profesyonel bakım ve onarım hizmeti.
@@ -24,20 +24,25 @@ export default function Footer() {
             <h3 className="text-lg font-semibold text-white mb-6">İletişim</h3>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
-                <MapPin className="h-5 w-5 text-[#f25c38] shrink-0 mt-0.5" />
-                <span className="text-slate-400">
+                <MapPin className="h-5 w-5 text-[#e7000b] shrink-0 mt-0.5" />
+                <a 
+                  href="https://www.google.com/maps/place/Mutlu+Otomotiv/@38.4474002,27.1836474,19.92z/data=!4m6!3m5!1s0x14b962a540165a4d:0x326a0d3b65bd9cf5!8m2!3d38.4473057!4d27.1838806!16s%2Fg%2F11g6pgz3l2?entry=ttu&g_ep=EgoyMDI2MDkwMi4wIKXMDSoASAFQAw%3D%3D"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-slate-400 hover:text-white transition-colors"
+                >
                   Kazımdirik, 419. Sk. No:21,<br />
                   35100 Bornova/İzmir
-                </span>
+                </a>
               </li>
               <li className="flex items-center gap-3">
-                <Phone className="h-5 w-5 text-[#f25c38] shrink-0" />
+                <Phone className="h-5 w-5 text-[#e7000b] shrink-0" />
                 <a href="tel:+902324350135" className="text-slate-400 hover:text-white transition-colors">
                   0 (232) 435 01 35
                 </a>
               </li>
               <li className="flex items-center gap-3">
-                <Phone className="h-5 w-5 text-[#f25c38] shrink-0" />
+                <Phone className="h-5 w-5 text-[#e7000b] shrink-0" />
                 <a href="tel:+905357919301" className="text-slate-400 hover:text-white transition-colors">
                   0 (535) 791 93 01
                 </a>
@@ -68,7 +73,7 @@ export default function Footer() {
                   <Clock className="h-4 w-4 text-slate-500" />
                   <span className="text-slate-400">Pazar</span>
                 </div>
-                <span className="text-red-400 font-medium">Kapalı</span>
+                <span className="text-[#e7000b] font-medium">Kapalı</span>
               </li>
             </ul>
           </div>
